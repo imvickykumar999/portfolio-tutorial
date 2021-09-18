@@ -27,10 +27,12 @@
       <div class="jumbotron">
         <div class="container">
 
-          <div class="alert alert-success" role="alert">
-            <a target = '_blank' href="{{url_for('index')}}">
+          <div class="alert alert-danger" role="alert">
+            <a href="{{url_for('index')}}">
               <h1>
-                Error 404
+                <strong>
+                  Error 404
+                </strong>
               </h1>
             </a>
 
@@ -41,6 +43,16 @@
 
           </div>
           <br>
+
+          <div class="alert alert-primary" role="alert">
+            <a target = '_blank' href="https://api.whatsapp.com/send?phone=918239957923&text= Hey Vicks, I am getting error. Help! ">
+              <h1 style="color:green;">
+                <em>
+                  heroku logs -t -a vixtest
+                </em>
+              </h1>
+            </a>
+          </div>
 
         </div>
       </div>
