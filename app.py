@@ -5,9 +5,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     vid = request.args.get('vid')
-    
+
     if vid == None:
-        vid = '9fb2I7iDX70'
+        vid = 'KZehm-meGMg'
     return render_template('index.html', vid=vid)
 
 @app.errorhandler(404)
