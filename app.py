@@ -4,12 +4,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    from basics import counter
-
-    views = counter.callviews('vicks')
-    return render_template('index.html',
-                           views = views,
-                           )
+    vid = request.args.get('vid')
+    
+    if vid == None:
+        vid = '9fb2I7iDX70'
+    return render_template('index.html', vid=vid)
 
 @app.errorhandler(404)
 def page_not_found(e):
