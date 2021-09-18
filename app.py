@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    from basics import counter
+
+    views = counter.callviews('vicks')
+    return render_template('index.html',
+                           views = views,
+                           )
 
 @app.errorhandler(404)
 def page_not_found(e):
