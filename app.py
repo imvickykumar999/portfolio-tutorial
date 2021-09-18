@@ -3,13 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-
-    vid = request.args.get('vid')
-
-    return render_template('portfolio.html',
-                           name = 'Vicky Kumar',
-                           vid = vid,
-                           )
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
